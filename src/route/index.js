@@ -340,45 +340,45 @@ router.get('/task31', function (req, res) {
             href: 'https://github.com/',
           },
         },
-        // {
-        //   picture: {
-        //     src: 'https://picsum.photos/400/200',
-        //     alt: 'Paris',
-        //   },
-        //   title: 'Paris',
-        //   description:
-        //     "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy, and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture, haute couture fashion houses, and designer boutiques along the Rue du Faubourg Saint-Honoré.",
-        //   button: {
-        //     text: 'Read',
-        //     href: 'https://github.com/',
-        //   },
-        // },
-        // {
-        //   picture: {
-        //     src: 'https://picsum.photos/400/200',
-        //     alt: 'Tokyo',
-        //   },
-        //   title: 'Tokyo',
-        //   description:
-        //     "Tokyo, Japan’s bustling capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
-        //   button: {
-        //     text: 'Reac',
-        //     href: 'https://github.com/',
-        //   },
-        // },
-        // {
-        //   picture: {
-        //     src: 'https://picsum.photos/400/200',
-        //     alt: 'Sydney',
-        //   },
-        //   title: 'Sydney',
-        //   description:
-        //     "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harborfront Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs.",
-        //   button: {
-        //     text: 'Reac',
-        //     href: 'https://github.com/',
-        //   },
-        // },
+        {
+          picture: {
+            src: 'https://picsum.photos/400/200',
+            alt: 'Paris',
+          },
+          title: 'Paris',
+          description:
+            "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy, and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture, haute couture fashion houses, and designer boutiques along the Rue du Faubourg Saint-Honoré.",
+          button: {
+            text: 'Read',
+            href: 'https://github.com/',
+          },
+        },
+        {
+          picture: {
+            src: 'https://picsum.photos/400/200',
+            alt: 'Tokyo',
+          },
+          title: 'Tokyo',
+          description:
+            "Tokyo, Japan’s bustling capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city's many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).",
+          button: {
+            text: 'Reac',
+            href: 'https://github.com/',
+          },
+        },
+        {
+          picture: {
+            src: 'https://picsum.photos/400/200',
+            alt: 'Sydney',
+          },
+          title: 'Sydney',
+          description:
+            "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harborfront Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs.",
+          button: {
+            text: 'Reac',
+            href: 'https://github.com/',
+          },
+        },
       ],
     },
     winner: {
