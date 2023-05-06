@@ -52,67 +52,52 @@
         <br>
         <hr>
         <br>
-        <ol>
-            {{#with winner}}
-                <h2>{{title}}</h2>
-                <div class="row">
-                    {{#with table}}
-                        <table class="table">
-                            {{#each head}}
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            {{this}}
-                                        </th>
-                                    </tr>
-                                </thead>
-                            {{/each}}
-                            {{#each user}}
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            {{place}}
-                                        </td>
-                                        <td>
-                                            {{name}}
-                                        </td>
-                                        <td>
-                                            {{surname}}
-                                        </td>
-                                        <td>
-                                            {{nickname}}
-                                        </td>
-                                    </th>
-                                </tbody>
-                            {{/each}}
-                        </table>
-                    {{/with}}
-                </div>
-            {{/with}}
-        </ol>
+        {{#with winner}}
+            <h2>{{title}}</h2>
+            <br>
+                {{#with table}}
+                <table class="table">
+                    <thead>
+                        {{#each head}}
+                        <th>{{this}}</th>
+                        {{/each}}
+                    </thead>
+                    <tbody>
+                        {{#each user}}
+                        <tr>
+                            <td>{{place}}</td>
+                            <td>{{name}}</td>
+                            <td>{{surname}}</td>
+                            <td>{{nickname}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                {{/with}}
+            </div>
+        {{/with}}
         <br>
         <hr>
         <br>
         {{#with gallery}}
-            <h2>{{title}}</h2>
-            <div class="row">
-                {{#each cards}}
-                    <div class="col-3 g-3">
-                        <div class="card">
-                            <div class="card-header">
-                                <div>{{name}}</div>   
-                                {{#each itams}}
-                                    <ul class="list-group list-group-flush"> 
-                                        <li class="list-group-item">
-                                            {{this}}
-                                        </li>
-                                    </ul>
-                                {{/each}}
-                            </div>
-                        </div>
-                    </div>
-                {{/each}}
+        <h2>{{title}}</h2>
+        <br />
+        <div class="row ">
+            {{#each cards}}
+            <div class="col-4 g-2">
+                <div class="card">
+                    <div class="card-header">
+                        {{name}}
+                    </div>   
+                    <ul class="list-group list-group-flush"> 
+                        {{#each items}}
+                            <li class="list-group-item">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
+            {{/each}}
+        </div>
         {{/with}}
         <br>
         <hr>
@@ -177,7 +162,7 @@
         <br>
         {{#with footer}}
             <h5>{{title}}</h5>
-            <div class="row">
+            <div class="row ">
                 {{#each navigation}}
                     <div class="col-4 g-3">
                         <a href="{{href}}" class="btn btn-link ">{{text}}</a>
