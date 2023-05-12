@@ -1,0 +1,68 @@
+<main>
+    <div>
+        <br>
+        <div class="nav nav-tabs"></div>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="nav nav-tabs">
+                    {{#with navigation}}
+                        {{#each links}}
+                        <div class="nav-item">
+                            {{#if @last}}
+                            <a href="{{link}}" class="nav-link disabled">{{text}}</a>
+                            {{else}}
+                            <a href="{{link}}" class="nav-link action">{{text}}</a>
+                            {{/if}}
+                        </div>
+                        {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="rov">
+            <div class="col-12">
+                <br>
+                <h1>{{header}}</h1>
+                <br>
+                <br>
+                {{#with contacts_data}}
+                    <div class="col-8"></div>
+                        <h2>{{title}}</h2>
+                        <div>
+                            {{#each buttons}}
+                                {{#if isPrimary}}
+                                    <button class="{{isPrimary}} btn btn-warning">{{text}}</button>
+                                {{else }}
+                                    <button class="{{isOutline}} btn text-warning">{{text}}</button>
+                                {{/if}}
+                            {{/each }}
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-8">
+                        {{#with form}}
+                            {{#with input}}
+                                <div class="col-4">
+                                    {{#with surname}}
+                                        <label class="form-label">{{label}} </label>
+                                        <input class="form-control">
+                                        <div class="form-text">{{placeholder}}</div>
+                                        <div>{{caption}}</div>
+                                    {{/with}}
+                                    {{#with name}}
+                                        <label class="form-label">{{label}} </label>
+                                        <input class="form-control">
+                                        <div class="form-text">{{placeholder}}</div>
+                                        <div>{{caption}}</div>
+                                    {{/with}}
+                                </div>
+                            {{/with}}
+                        {{/with}}
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+</main>
