@@ -1,0 +1,82 @@
+<div>
+    <div>
+        {{#with program}}
+            {{#with excursion}}
+                <h1>{{name}}</h1>
+                <hr>
+                <br>
+                <h2>Layout</h2>
+                <ol>
+                    {{#with  location}}
+                        <li><p>City:{{city}}</p></li>
+                        <li><p>Country:{{country}}</p></li>
+                    {{/with}}
+                </ol>
+                <p>Date:{{date}}</p>
+                <br>
+                <h2>Program</h2>
+                <ol>
+                    {{#each program}}
+                        <li><p>Name:{{name}}</p></li>
+                        <li><p>Type:{{type}}</p></li>
+                        <li><p>Duration:{{duration}}</p></li>
+                        <br>
+                        <h2>Details</h2>
+                        {{#with details}}
+                            <br>
+                            <h3>Museum</h3>
+                            {{#with museum}}
+                                <li><p>{{name}}</p></li>
+                                <h3>Location</h3>
+                                {{#with location}}
+                                    <li><p>Address:{{address}}</p></li>
+                                    <li><p>City:{{city}}</p></li>
+                                    <li><p>Country:{{country}}</p></li>
+                                {{/with}}
+                                <h3>Exhibits</h3>
+                                {{#each exhibits}}
+                                    <li><p>Name:{{name}}</p></li>
+                                    <li><p>Artist:{{artist}}</p></li>
+                                    <li><p>Description:{{description}}</p></li>
+                                    {{#if audio_guid}}
+                                        {{audio_guid}} 
+                                    {{else}} 
+                                        (досі тут знаходиться) 
+                                    {{/if}}
+                                    {{#unless artist includeZero=null}}  {{/unless}}
+                                {{/each}}
+                            {{/with}}
+                            <h3>Guide</h3>
+                            {{#with  guide}}
+                                <li><p>Name:{{name}}</p></li>
+                                <li><p>Language:{{language}}</p></li>
+                                <li><p>Rating:{{rating}}</p></li>
+                            {{/with}}
+                            <br>
+                            <h3>Venue</h3>
+                            {{#with venue}}
+                                <li><p>Name:{{name}}</p></li>
+                                {{#each  location}}
+                                    <li><p>{{this}}</p></li>
+                                {{/each}}
+                            {{/with}}
+                            <br>
+                            <h3>Performers</h3>
+                            {{#each performers}}
+                                <li><p>Name:{{name}}</p></li>
+                                <p>{{type}}</p>
+                            {{/each}}
+                            <br>
+                            <h3>Guide</h3>
+                            {{#with guide}}
+                                <li><p>Name:{{name}}</p></li>
+                                <li><p>Language:{{language}}</p></li>
+                                <li><p>Rating:{{rating}}</p></li>
+                            {{/with}}
+                        {{/with}}
+                    {{/each}}
+                </ol>
+            {{/with}}
+        {{/with}}
+    </div>
+</div>

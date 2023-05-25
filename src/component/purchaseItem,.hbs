@@ -1,0 +1,36 @@
+<div class="row">
+    {{#each itemList}}
+        <div class="col-4">
+            <div class="nav-item">
+                {{number}}
+                <h5>{{status}}</h5>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="nav-item">
+                {{#with amount}}
+                    {{title}}
+                    <h4>{{value}}</h4>
+                {{/with}}
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="nav-item">
+                {{#each images}}
+                    <img class="card-img-top"   src="{{images}}" alt="{{images}}">
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="nav-item">
+                {{#with button}}
+                    {{#if isPrimary}}
+                    <button class="{{link}} btn btn-primary btn-sm">{{text}}</button>
+                    {{else }}
+                    <button class="{{link}} btn btn-outline-danger btn-sm">{{text}}</button>
+                    {{/if}}
+                {{/with}}
+            </div>
+        </div>
+    {{/each}}
+</div>
