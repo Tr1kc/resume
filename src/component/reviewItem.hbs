@@ -1,0 +1,47 @@
+{{#with reviewBody}}
+    <div class="card ms-4 me-4 pt-3 ps-3 pb-3">
+        {{#with seller}}
+            {{title}}: {{value}}
+        {{/with}}
+        <br>
+        <br>
+        {{#with rating}}
+            {{title}}: {{value}}
+        {{/with}}
+        <br>
+        <br>
+        {{#each text}}
+            {{this}}
+        {{/each}}
+        <br>
+        <br>
+        {{#with advantages}}
+            <strong>{{title}}</strong>
+            {{text}}
+        {{/with}}
+        <br>
+        <br>
+        {{#with disadvantages}}
+            <strong>{{title}}</strong>
+            {{text}}
+        {{/with}}
+        <div class="row">
+            {{#each images}}
+                <div class="col-2">
+                    {{#if this}}
+                    <img class="card-img-top"   src="{{this}}" alt="{{images}}">
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    <div>
+        {{#each coments}}
+            <div class="card ms-5 mt-3 mb-3 me-4 pt-3 ps-3">
+                <strong><p>{{userName}}</p></strong>
+                <p>{{date}}</p>
+                <p>{{text}}</p>
+            </div>
+        {{/each}}
+    </div>
+{{/with}}
