@@ -282,6 +282,18 @@ router.get('/work', function (req, res) {
   })
 })
 
+
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    // ↙ сюди вводимо JSON дані
+
+    layout:'index',
+  
+    footer,
+  })
+
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
@@ -394,7 +406,7 @@ router.get('/shopcart', function (req, res) {
           link: 'https://www.youtube.com/',
         },
       },
-=======
+
 
     formBlock: {
       header: 'Відгуки покупців про Ноут',
@@ -3016,6 +3028,7 @@ router.get('/bio', function (req, res) {
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
+
 })
 
 // ================================================================
