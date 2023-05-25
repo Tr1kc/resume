@@ -1,0 +1,186 @@
+<main>
+    <div>
+        <br>
+        <ol>
+            {{#with navigation}}
+                {{#each links}}
+                    <a href={{href}} class="btn btn-link">{{text}}</a>
+                {{/each}}
+                {{#with button}}
+                    <a href={{href}} class="btn btn-primary">{{text}}</a>
+                {{/with}}
+            {{/with}}
+        </ol>
+        <hr>
+        <br>
+        <ol>
+            {{#with header}}
+                <h1>{{title}}</h1>
+                <br>
+                <p>{{description}}</p>
+                {{#with button}}
+                    <a href={{link}} class="btn btn-primary">{{text}}</a> 
+                {{/with}}
+            {{/with}}
+        </ol>
+        <br>
+        <hr>
+        <br>
+        {{#with city}}
+            <h2>{{title}}</h2>
+            <br>
+                <div class="row">
+                    {{#each cards}}
+                        <div class="col-5 g-3">
+                            <div class="card">
+                                {{#with picture}}
+                                    <img class="card-img-top" src="{{src}}" alt="{{alt}}">
+                                {{/with}}
+                                <div class="card-body">
+                                    <h4 class="card-title">{{title}}</h4>
+                                    <p>{{description}}</p>
+                                    {{#with button}}
+                                        <a href="{{href}}"><button target="_blank" class="btn btn-primary">{{text}}</button></a>
+                                    {{/with}}
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/with}}
+        <br>
+        <hr>
+        <br>
+        {{#with winner}}
+            <h2>{{title}}</h2>
+            <br>
+                {{#with table}}
+                <table class="table">
+                    <thead>
+                        {{#each head}}
+                        <th>{{this}}</th>
+                        {{/each}}
+                    </thead>
+                    <tbody>
+                        {{#each user}}
+                        <tr>
+                            <td>{{place}}</td>
+                            <td>{{name}}</td>
+                            <td>{{surname}}</td>
+                            <td>{{nickname}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                {{/with}}
+            </div>
+        {{/with}}
+        <br>
+        <hr>
+        <br>
+        {{#with gallery}}
+        <h2>{{title}}</h2>
+        <br />
+        <div class="row ">
+            {{#each cards}}
+            <div class="col-4 g-2">
+                <div class="card">
+                    <div class="card-header">
+                        {{name}}
+                    </div>   
+                    <ul class="list-group list-group-flush"> 
+                        {{#each items}}
+                            <li class="list-group-item">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{/with}}
+        <br>
+        <hr>
+        <br>
+        {{#with relaxion}}
+            <div class="display-3"><strong>{{title}}</strong></div>
+            <div class="row">
+                {{#each cards}}
+                    <div class="col-5 g-3">
+                        <div class="card text-bg-secondary">
+                            <div class="card-header">{{header}}</div>
+                            <div class="card-body">
+                                <h4 class="card-body-title">{{title}}</h>
+                                <p>{{description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/with}}
+        <br>
+        <hr>
+        <br>
+        {{#with rest}}
+            <div class="row">
+                {{#each cards}}
+                    <div class="col-6 g-3">
+                        <div class="card">
+                            <div class="card-header text-center">{{header}}</div>
+                            <div class="card-body text-center">
+                                <h4 class="card-title">{{title}}</h4>
+                                <p>{{description}}</p>
+                                <button class="btn btn-primary">{{button}}</button>
+                            </div>
+                            <div class="card-footer text-center">{{footer}}</div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/with}}
+        <br>
+        <hr>
+        <br>
+        {{#with proposition}}
+            <div class="display-3"><strong>{{title}}</strong></div>
+            <div class="row">
+                {{#each card}}
+                    <div class="col-5 g-3">
+                        <div class="card text-bg-warning">
+                            <div class="card-header">{{header}}</div>
+                            <div class="card-body">
+                                <h5 class="card-body-title">{{title}}</h5>
+                                <p>{{description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/with}}
+        <br>
+        <hr>
+        <br>
+        {{#with footer}}
+            <h5>{{title}}</h5>
+            <div class="row ">
+                {{#each navigation}}
+                    <div class="col-4 g-3">
+                        <a href="{{href}}" class="btn btn-link ">{{text}}</a>
+                    </div>
+                {{/each}}
+                {{#each socialMedia}}
+                    <div class="col-4 g-3">
+                        <a href="{{link}}" class="btn btn-dark">{{name}}</a>
+                    </div>
+                {{/each}}
+                {{#each partners}}
+                    <div class="col-4 g-3">
+                        <a href="{{link}}" class="btn btn-info">{{name}}</a>
+                    </div>
+                {{/each}}
+            </div>
+        {{/with}}
+        <br>
+        <br>
+    </div>
+</main>
