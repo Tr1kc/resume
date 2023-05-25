@@ -1,0 +1,110 @@
+<div>
+  <div>
+    <h1>{{name}}</h1>
+    <hr>
+    <p><b>Was born:</b>{{birthdate}} - {{birthplace}}</p>
+    <p><b>Died:</b>{{deathdate}} - {{deathplace}}</p>
+    <p><b>Nationality:</b>{{nationality}}</p>
+    <p><b>Occupation:</b>{{occupation}}</p>
+    <p><b>Known_for</b></p>
+    <ol>
+        {{#each  known_for}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ol>
+    <br>
+    <div>
+    {{#each education}}
+      <h2>Education</h2>
+      <br>
+      <p><b>Degree:</b>{{degree}}</p>
+      <p><b>Field:</b>{{field}}</p>
+      <p><b>Institution:</b>{{institution}}</p>
+      <p><b>Year:</b>{{year}}</p>
+    {{/each}}
+    </div>
+    <br>
+    <div>
+      <h2>Notable_publications</h2>
+      {{#each notable_publications}}
+        <br>
+        <p><b>Title:</b>{{title}}</p>
+        <p><b>Year:</b>{{year}}</p>
+        <p><b>Publisher:</b>{{publisher}}</p>
+      {{/each}}
+    </div>
+    <br>
+    <div>
+      <h2>Partners</h2>
+      {{#each partners}}
+        <br>
+        <p><b>Name:</b>{{name}}</p>
+        <p><b>Relationship:</b>{{relationship}}</p>
+        <p><b>Years:</b>{{years}}</p>
+      {{/each}}
+    </div>
+    <br>
+    <div>
+      <h2>Awards</h2>
+      {{#each awards}}
+        <br>
+        <p><b>Title:</b>{{title}}</p>
+        <p><b>Year:</b>{{year}}</p>
+        <p><b>Description:</b>{{description}}</p>
+      {{/each}}
+    </div>
+    <br>
+    <div>
+      <h2>Influences</h2>
+      <br>
+      <ol>
+          {{#each influences}}
+            <li><p>{{this}}</p></li>
+          {{/each}}
+      </ol>
+    </div>
+    <br>
+    <div>
+      <h2>Influenced</h2>
+      <br>
+      <ol>
+          {{#each influenced}}
+            <li><p>{{this}}</p></li>
+          {{/each}}
+      </ol>
+    </div>
+    <br>
+    <div>
+      <h2>Quotes</h2>
+      <br>
+      <ol>
+          {{#each quotes}}
+            <li><p>{{this}}</p></li>
+          {{/each}}
+      </ol>
+    </div>
+    <br>
+    <div>
+      <h2>Major_discoveries</h2>
+      {{#each major_discoveries}}
+        <br>
+        <p><b>Title:</b>{{title}}</p>
+        <p><b>Year:</b>{{year}}</p>
+        <p><b>Description:</b>{{description}}</p>
+      {{/each}}
+    </div>
+    <br>
+    <div>
+      <h2>Contributions</h2>
+      {{#with contributions}}
+        <br>
+        <p><b>Title:</b>{{title}}</p>
+        <p><b>Description:</b>{{description}}</p>
+        <p><b>Year:</b>{{year}}</p>
+        <p><b>Field:</b>{{field}}</p>
+      {{/with}}
+    </div>
+  </div>
+</div>
+
+{{!-- ,{{birthdate}},{{birthplace}},{{deathdate}},{{deathplace}},{{nationality}},{{occupation}}, --}}
