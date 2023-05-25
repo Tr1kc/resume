@@ -282,6 +282,17 @@ router.get('/work', function (req, res) {
   })
 })
 
+//              ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    // ↙ сюди вводимо JSON дані
+
+    layout:'index',
+  
+    footer,
+  })
+})
 
 
 // ================================================================
