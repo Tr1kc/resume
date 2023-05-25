@@ -1,0 +1,39 @@
+{{#each goodsList}}
+    <div class="col-6   card pb-2">
+        <img class="card-img-top"   src="{{img}}" alt="{{img}}">
+        <div>
+            <span class="badge text-bg-warning rounded-pill">HOT!</span>
+            <span class="badge btn btn-primary rounded-pill">NEW</span>
+        </div>
+        <br>
+        <div><span class="badge btn btn-success rounded-pill">Швидка доставка</span></div>
+        <div><span class="badge btn btn-secondary rounded-pill my-2">Безкоштовна доставка</span></div>
+        <div>
+            <h6>{{name}}</h6>
+        </div>
+        {{#with review}}
+            {{amount}} {{text}}
+        {{/with}}
+        <div class="mt-2"><h4>{{price}}</h4></div>
+        <div>{{delivery}}</div>
+        {{#each buttons}}
+            <div>
+                {{#if isPrimary}}
+                <button href="{{link}}" class=" btn btn-primary px-4 mt-2 ">{{text}}</button>
+                {{else isSecondary}}
+                <button href="{{link}}" class=" btn btn-secondary px-4 mt-2">{{text}}</button>
+                {{/if}}
+            </div>
+        {{/each}}
+        {{#each characteristics}}
+            <div>
+                <ul>
+                    <li>
+                        {{title}}:{{value}}
+                    </li>
+                </ul>
+            </div>
+        {{/each}}
+        <br>
+    </div>
+{{/each}}
