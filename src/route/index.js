@@ -53,7 +53,7 @@ router.get('/', function (req, res) {
 router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
-    // ↙ сюди вводимо JSON дані
+    // ↙ сюди вводимо JSON дані holm-4321
 
     page: {
       title: "Resume | Summary",
